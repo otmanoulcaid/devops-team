@@ -1,0 +1,405 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --varColor :#39A2DB ;
+}
+.App {
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ background-color:#f5fafd; 
+}
+
+.Tabs {
+  width: 80%;
+  height: auto;
+  min-height: 400px;
+  background: #ffffff;
+  padding: 2rem 1rem;
+  color: #000000;
+  padding: 2rem 0;
+  /* border: #000000 1px solid; */
+  box-shadow: 0 0 10px 2px  #cecece;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+ ul.nav {
+  width: 60%;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #39A2DB;
+  border-radius: 2rem;
+  padding-left: 0px;
+  width: 90%;
+  /* @media (max-width: 768px) {
+    width: 90%;
+  } */
+}
+ul.nav li {
+  width: 50%;
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.7s;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+  color: var(--varColor);
+}
+ul.nav li:nth-child(2) {
+  border-radius: 0;
+}
+ul.nav li:nth-child(3) {
+  border-radius: 0;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+ul.nav li:hover {
+  background: rgba(50, 224, 196, 0.15);
+}
+ul.nav li.active {
+  background: #39A2DB;
+  color: white;
+}
+
+.FirstTab p , .SecondTab p , .ThirdTab p ,h2{
+  font-size:x-large;
+  text-align: center;
+  color: gray;
+  padding-bottom:20px;
+}
+.outlet{
+  height: auto;
+}
+.FirstTab, .SecondTab ,.ThirdTab{
+  width: 100%;
+  height: 350px;
+}
+.FirstTab{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Form-group{
+  justify-self: center;
+  text-align: center;
+}
+.hidden-Content{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hiddenTex{
+  /* display: flex; */
+  text-align:center;
+  width: 350px;
+  height: auto;
+  font-size:larger;
+  /* */
+  margin-bottom:20px ;
+}
+.toTab2{
+  align-self: center;
+}
+h1::first-letter{
+  color: #39A2DB;
+}
+.SecondTab{
+  display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.InputField{
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: 1 / 1 / 4 / 5;
+  justify-self: end;
+  min-width: 100px;
+}
+.SymptomsContent{
+  /* background-color:#F7EEDD; */
+  background-color: rgb(217, 215, 215);
+  grid-area: 2 / 6 / 11 / 10;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f0f0f0;
+
+}
+.toTab3{
+  grid-area: 10 / 2 / 10 / 5;
+  justify-self: center;
+  margin-top: 10px;
+  margin-left: 30px;
+
+}
+.icon{
+  color: rgb(255, 255, 255);
+  height: auto;
+  opacity: 0.4;
+}
+.board{
+  grid-area: 3 / 1 / 8 / 4; 
+  width: 150px;
+}
+.scope{
+  width: 30px;
+  grid-area: 2 / 3 / 2 / 4;
+}
+span{
+  grid-area: 6 / 5 / 8 / 10;
+  font-size: x-large;
+  color: gray;
+  opacity: 0.5;
+}
+
+.input {
+  width: 300px;
+  border-radius: 10px;
+  outline: 2px solid var(--varColor);
+  border: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  background-color: #e2e2e2;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  transition: 0.25s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.input:focus {
+  outline-offset: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #39A2DB;
+  transition: all 1000ms;
+  font-size: 15px;
+  overflow: hidden;
+  outline: 2px solid #39A2DB;
+}
+.button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #39A2DB;
+  box-shadow: 4px 5px 17px -4px #39A2DB;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #39A2DB;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+.button:hover::before {
+  width: 250%;
+}
+
+/* Note that you only needs to edit the config to customize the button! */
+.AddButton {
+  position: absolute;
+  right: 10%;
+  bottom: 25%;
+  align-self:end;
+  background-color: #14b3f7;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+.AddButton:active {
+  background-color: var(--varColor);
+  color: #ffffff;
+  box-shadow: 0 0 5px 0.5px var(--varColor);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: rgb(153, 152, 152);
+}
+.symptomsBox{
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.singleSymptom{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width:100% ;
+  height: 45px;
+  font-size: medium;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+}
+.ButtonFordelete{
+  position: absolute;
+  background-color: rgb(217, 215, 215);
+  width: 35px;
+  height:40px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(134, 131, 131);
+  /* padding: 14px 24px; */
+  cursor: pointer;
+  right: 0px;
+}
+.ButtonFordelete:hover{
+  color: white;
+  background-color:#384490;
+  border-color: #000000;
+}
+.ThirdTab{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.ConditionContent{
+  width: 80%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #cecece;
+  border-radius: 10px;
+}
+
+.SymptomList{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  grid-area: 4 / 2 / 10 / 5;
+  justify-self: end;
+  background-color:#f5fafd; 
+  box-shadow: 0 0 10px 2px  #cecece;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f0f0f0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.SymptomItem{
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  height:  40px;
+  cursor: pointer;
+  list-style: none;
+  font-size: medium;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* margin-left: 20px; */
+  
+}
+.AddButton:hover{
+  background-color: #ffffff;
+  color: var(--varColor);
+}
+.SymptomItem:hover{
+  background-color:#b3d4e8;
+}
+
+.conditionContianer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: center;
+  align-items: center;
+  /* border: #000000 1px solid; */
+  gap: 10px;
+}
+.listOfConditions{
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-left: 50px;
+  justify-content: center;
+  align-items: center;
+  /* border: #ff0000 1px solid; */
+}
+.condition{
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 60px;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: rgb(224, 217, 217) ;
+  justify-content: center;
+  font-size: large;
+  font-style: normal;
+  font-family: Sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #000000;
+  /* border: #000000 1px solid; */
+}
+.listOfConditions h3{
+  font-size: x-large;
+  color: #020D19;
+}
+.description{
+  flex: 70%;
+  /* border: #14b3f7 solid 1px; */
+  height: 100%;
+  padding: 20px;
+  font-family: Sans-serif;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+.description h4{
+  text-align: center;
+}

@@ -1,0 +1,260 @@
+.text-primary {
+    color: #000000 !important;
+    font-size: x-large;
+    font-family: cursive;
+}
+.text-primary::first-letter{
+    color: #5a8dee;
+}
+
+.btn-primary {
+    border-color: #5a8dee !important;
+    background-color: #5a8dee !important;
+    color: #fff;
+    width: 30px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.shadow-md {
+    box-shadow: 0px 5px 10px rgba(90, 116, 148, 0.3);
+}
+nav{
+    display: flex;
+    width: 100vmax;
+    padding: 20px;
+}
+.navContianer{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 25px;
+}
+.navButton{
+    position: absolute;
+    right: 0%;
+}
+button{
+    border: none;
+}
+.navbar {
+    border-radius: 5px;
+    font-size: larger;
+    /* font-family: ; */
+}
+
+.sidebar {
+    width: 280px;
+    min-height: 100vh;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sd-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sd-body {
+    padding: 15px;
+    max-height: calc(100vh - 67px);
+    overflow-x: hidden;
+}
+
+.sd-body ul {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.sd-body ul li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.sd-body ul li .sd-link {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 16px;
+    color: #475f7b;
+    background-color: #e5e8ec;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.faTimes{
+    cursor: pointer;
+
+}
+.skin{
+    width: 100px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.listOfSymptoms{
+    position: absolute;
+    top: 0%;
+    left: 36%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    /* border: 1px solid black; */
+    background-color: #fff;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px 2px #656565;
+    z-index: 1;
+}
+.symptoms{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+.listOfItames{
+    display: flex;
+    flex-direction: row;
+    padding-left:20px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    font-size: larger;
+    gap: 20px;
+}
+.listFilteredItems{
+    display: flex;
+    flex-direction: row;
+    padding-left:20px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    font-size: larger;
+    gap: 20px;
+}
+.checkBox{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.btnx{
+    width:100%;
+    height: 50px;
+    cursor: pointer;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Done{
+    margin-top: 20px;
+    background-color: #5a8dee;
+    color: rgb(255, 255, 255);
+}
+.skip{
+    color: aqua;
+}
+
+.conditionC{
+    background-color: #5a8dee;
+    color: #fff;
+}
+.btnCoondition{
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+
+}
+.conditionContant{
+    position: absolute;
+    top: 100%;
+    left: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+    width: 750px;
+    height: 430px;
+    background-color: #fff;
+    /* text-align: center; */
+    box-shadow: 0 0 10px 2px #656565;
+    z-index: 1;
+}
+
+.mb-0{
+    font-size: larger;
+    font-weight: 900;
+    color: #5a8dee;
+}
+.descriptionSideBar{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    gap: 10px;
+font-family: Sans-serif;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+.answer{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font-family: Sans-serif;
+    font-weight: 600;
+    font-size: large;
+    background-color: #ffffff;
+}
+.conditionContant h4{
+    font-family: Sans-serif;
+    font-weight: 600;
+    font-size: large;
+}
