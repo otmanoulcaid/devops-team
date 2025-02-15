@@ -1,7 +1,11 @@
-FROM nginx
+FROM node:16
 
-COPY nginx.conf /etc/nginx/nginx.conf
+WORKDIR /app
 
-COPY my-app/ /var/www/html/
+RUN npm install vite
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+COPY app/ ./
+
+EXPOSE 5173
+
+ENTRYPOINT ["npm", "run", "dev"]

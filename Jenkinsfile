@@ -31,7 +31,7 @@ pipeline {
 
         stage('deploy docker container') {
             steps {
-                sh 'docker run --name=$CONTAINER_NAME -d -p 8008:80 $IMAGE_NAME'
+                sh 'docker run --name=$CONTAINER_NAME -d -p 5173:5173 $IMAGE_NAME'
             }
         }
     }
