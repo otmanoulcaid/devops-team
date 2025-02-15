@@ -1,4 +1,6 @@
-FROM node:16
+FROM debian:stable-slim
+
+RUN apt update && apt install npm -y
 
 WORKDIR /app
 
