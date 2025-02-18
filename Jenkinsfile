@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $IMAGE_NAME .'
+                sh 'docker build -t $IMAGE_NAME:v01 .'
             }
         }
 
@@ -31,7 +31,7 @@ pipeline {
 
         stage('deploy docker container') {
             steps {
-                sh 'docker run --name=$CONTAINER_NAME -d -p 5173:5173 $IMAGE_NAME'
+                sh 'docker run --name=$CONTAINER_NAME -d -p 5173:5173 $IMAGE_NAME:v01'
             }
         }
     }
