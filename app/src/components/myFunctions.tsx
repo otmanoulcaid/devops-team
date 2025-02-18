@@ -9,8 +9,7 @@ export function doesExist(_var: string, table: string[]): boolean {
   }
 export   const sendData = async (Symptom: string[]) : Promise<Object> => {
   try {
-    const response = await axios.post("http://127.0.0.1:8000/predict/", {Symptom});
-    console.log(response.data);
+    const response = await axios.post("http://djangoserver:8000/predict/", {Symptom});
     return (response.data);
   } catch (error) {
     console.error("Error:", error);

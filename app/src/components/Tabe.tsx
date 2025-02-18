@@ -70,9 +70,6 @@ function Tabe({symptoms}:prop) {
       // Once data is fetched, set isLoading to false and display the result
       setIsLoading(false);
     }, 2000); // Adjust the time as per your requirement
-
-    // You would typically perform an API call here
-    console.log(isLoading);
   };
   const handleTabs = () => {
     if (activeTab === "tab1") {

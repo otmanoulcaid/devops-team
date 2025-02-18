@@ -35,7 +35,7 @@ const SymptomSideBar : React.FC<prop> = ({ symptoms,symptomsFilterd }:prop) => {
     setkeys(Object.keys(symptomsFilterd));
     setList([...symptoms]);
   }, [symptoms]);
-  console.log(keys);
+
   const toggleList = () => {
     setHidden(!hidden);
   };
@@ -70,8 +70,6 @@ const SymptomSideBar : React.FC<prop> = ({ symptoms,symptomsFilterd }:prop) => {
       setIsLoading(false);
     }, 2000); // Adjust the time as per your requirement
 
-    // You would typically perform an API call here
-    console.log(isLoading);
   };
   return (
     <>

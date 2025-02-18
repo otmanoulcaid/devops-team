@@ -10,9 +10,9 @@ function App() {
   }>({});
   const fetchDataFromBackend = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/getSymptoms/");
+      const response = await axios.get("http://djangoserver:8000/getSymptoms/");
       const responseFiltered = await axios.get(
-        "http://127.0.0.1:8000/getFiltredData/"
+        "http://djangoserver:8000/getFiltredData/"
       );
       const dataFromDb = responseFiltered?.data;
       setResponseData(response.data);
